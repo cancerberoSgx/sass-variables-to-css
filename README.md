@@ -4,11 +4,14 @@ So for that, first we need to hack libsass - and initially this is what is all a
 
 #install - download libsass and configure it
 
+The first time you will need to download libsass and configure it for compiling:
+
+    cd sass-variables-to-css
     git clone https://github.com/sass/libsass.git
 
     cd libsass
-    #autoreconf --force --install
-    #./configure --disable-tests --disable-static --enable-shared --prefix=`pwd`
+    autoreconf --force --install
+    ./configure --disable-tests --disable-static --enable-shared --prefix=`pwd`
     make -j5 install
     cd ..
 
